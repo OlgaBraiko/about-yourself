@@ -1,15 +1,10 @@
-import styles from './index.module.scss'
-import cl from 'classnames'
-import Link from 'next/link'
-import { AiOutlineArrowLeft } from 'react-icons/ai'
+import React from "react";
+import cl from "classnames";
+import styles from "./index.module.scss";
 
-export const Article = ({ className, children, backUrl }) => (
-  <article className={cl(className, styles.article)}>
-    <Link href={backUrl}>
-      <a className={styles.back}>
-        <AiOutlineArrowLeft />
-      </a>
-    </Link>
-    <div className={styles.content}>{children}</div>
-  </article>
-)
+const Article = ({ className, children }) => {
+  return (
+    <article className={cl(className, styles.article)}>{children}</article>
+  );
+};
+export default Article;

@@ -1,32 +1,27 @@
-import styles from './index.module.scss'
-import cl from 'classnames'
+import styles from "./index.module.scss";
+import cl from "classnames";
 import {
-  AiFillYoutube,
   AiFillGithub,
   AiFillTwitterCircle,
-  AiFillInstagram
-} from 'react-icons/ai'
-import { ScreenEgg } from '../../components'
-import React from 'react'
+  AiFillInstagram,
+} from "react-icons/ai";
+import { ScreenEgg } from "../../components";
+import React from "react";
 
 const socialNetworks = [
   {
-    href: '#',
-    icon: AiFillYoutube
+    href: "#",
+    icon: AiFillGithub,
   },
   {
-    href: '#',
-    icon: AiFillGithub
+    href: "#",
+    icon: AiFillTwitterCircle,
   },
   {
-    href: '#',
-    icon: AiFillTwitterCircle
+    href: "#",
+    icon: AiFillInstagram,
   },
-  {
-    href: '#',
-    icon: AiFillInstagram
-  }
-]
+];
 
 export const SocialNetworks = ({ className }) => (
   <ScreenEgg>
@@ -36,16 +31,15 @@ export const SocialNetworks = ({ className }) => (
           <a
             href={s.href}
             className={styles.link}
-            target='_blank'
-            rel='noreferrer noopener'
-          >
+            target="_blank"
+            rel="noreferrer noopener">
             {React.createElement(s.icon, {
-              color: 'black',
-              size: 50
+              color: "black",
+              size: 50,
             })}
           </a>
         </li>
       ))}
     </ul>
   </ScreenEgg>
-)
+);
