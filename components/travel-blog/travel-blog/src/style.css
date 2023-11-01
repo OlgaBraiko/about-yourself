@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-size: cover;
+  background-color: rgba(1, 0, 0, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.wrapper-full {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+/* Стили для шапки */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header_active {
+  background: #0e1d28;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 55px;
+}
+
+.header__logo {
+  color: #fff;
+  font-family: Philosopher;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  height: 70px;
+  flex-shrink: 0;
+}
+.header__item {
+  margin-right: 80px;
+  margin-bottom: 15px;
+}
+.header__item:last-child {
+  margin-right: 35px;
+}
+
+.header__link {
+  line-height: 2rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.header__nav ul {
+  list-style-type: none;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.75;
+}
+
+.header__burger {
+  width: 50px;
+  height: 30px;
+  position: relative;
+  left: 0;
+  display: none;
+}
+
+.burger__first {
+  top: 0;
+}
+.burger__third {
+  bottom: 0;
+}
+.burger__second {
+  transform: translate(50% 50%);
+  top: 50%;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #8c0909;
+  position: absolute;
+}
+
+/* Стили для основного контента */
+
+.container {
+}
+.intro {
+  min-height: 100vh;
+  background: url("../public/Rectangle\ 1.jpg") lightgray 50% / cover no-repeat;
+  padding-top: 265px;
+  padding-bottom: 235px;
+}
+
+.intro__title {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: white;
+  max-width: 620px;
+  margin-bottom: 22px;
+}
+
+.intro__button {
+  width: 375px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(38, 197, 232, 0.14) 0%,
+    rgba(0, 149, 214, 0.14) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+.intro__subtitle {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  max-width: 545px;
+  color: #ffff;
+  margin-bottom: 60px;
+}
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-form__field {
+  width: 300px;
+  background-color: transparent;
+  background: url("./img/Oval.svg") no-repeat left top;
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #bfc0c5;
+  margin-right: 60px;
+  padding-left: 45px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+}
+
+.search-form__field::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+.search-form__submit {
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: 2rem;
+  color: white;
+  background: #1b7dff;
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__submit:hover,
+.search-form__submit:focus,
+.search-form__submit:active {
+  background: rgb(108, 160, 228);
+}
