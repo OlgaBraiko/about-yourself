@@ -6,100 +6,156 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__wrapper">
-          <div class="header__logo">
-            <a href="#" class="header__logo-link">
-              <img
-                src="./public/fa-solid_tree.svg"
-                alt="#tree"
-                class="header__logo-pic"
-            /></a>
-            Aplain
-          </div>
-          <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#TRAVELLER" class="header__link js-scroll"
-                  >TRAVELLER TYPE</a
-                >
-              </li>
-              <li class="header__item">
-                <a href="#COUPLE" class="header__link js-scroll">COUPLE</a>
-              </li>
-              <li class="header__item">
-                <a href="#PROGRAM" class="header__link js-scroll">PROGRAM</a>
-              </li>
-              <li class="header__item">
-                <a href="#MOUNTAINING" class="header__link js-scroll"
-                  >MOUNTAINING</a
-                >
-              </li>
-              <li class="header__item">
-                <a href="#SET LOCATION" class="header__link js-scroll"
-                  >SET LOCATION</a
-                >
-              </li>
-            </ul>
-            <div class="header__nav-close">
-              <span class="header__nav-close-line"></span>
-              <span class="header__nav-close-line"></span>
-            </div>
-          </nav>
-          <div class="header__burger burger">
-            <span class="burger__line burger__first"></span>
-            <span class="burger__line burger__second"></span>
-            <span class="burger__line burger__third"></span>
-          </div>
+    <header class="wrapper">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">
+          <img
+            src="./public/fa-solid_tree.svg"
+            alt="#tree"
+            class="header__logo-pic"
+        /></a>
+        Aplain
+      </div>
+      <div class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#TRAVELLER" class="header__link js-scroll"
+              >TRAVELLER TYPE</a
+            >
+          </li>
+          <li class="header__item">
+            <a href="#COUPLE" class="header__link js-scroll">COUPLE</a>
+          </li>
+          <li class="header__item">
+            <a href="#PROGRAM" class="header__link js-scroll">PROGRAM</a>
+          </li>
+          <li class="header__item">
+            <a href="#MOUNTAINING" class="header__link js-scroll"
+              >MOUNTAINING</a
+            >
+          </li>
+          <li class="header__item">
+            <a href="#SET LOCATION" class="header__link js-scroll"
+              >SET LOCATION</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="header__burger burger">
+          <span class="burger__line burger__first"></span>
+          <span class="burger__line burger__second"></span>
+          <span class="burger__line burger__third"></span>
         </div>
       </div>
     </header>
 
     <main class="container">
-      <section class="intro">
-        <div class="wrapper">
-          <h1 class="intro__title">
-            Mountain <br />
-            Climbing trips & tours
-          </h1>
-          <button class="intro__button" type="submit">VIEW PROGRAM</button>
-          <h2 class="intro__title">About</h2>
-          <p class="intro__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-            <a>READ MORE...</a>
-          </p>
-          <!-- <form class="search__form">
-            <fieldset class="search-form__wrap">
-              <p class="search-form__info">
-                <input
-                  type="text"
-                  name="user-like-to-do"
-                  class="search-form__field"
-                  placeholder="What would you like to do?" />
+      <section class="section__wrapper">
+        <section class="intro__container">
+          <form class="intro__search">
+            <input class="intro__input" type="text" />
+            <img
+              class="intro__search-icon"
+              src="./public/bx_bx-search.svg"
+              alt="#" />
+          </form>
+        </section>
+        <section class="intro">
+          <div class="intro__block">
+            <h1 class="intro__title">
+              <strong>Mountain </strong> Climbing trips & tours
+            </h1>
+          </div>
+          <div class="intro-watch__wrapper">
+            <div class="intro__watch-videos">
+              <a
+                href="https://www.youtube.com/watch?v=pqQFOPYz5Ww"
+                class="intro-watch__link">
+                <img
+                  class="watch__icon"
+                  src="./public/Group 2.svg"
+                  alt="#group" />
+              </a>
 
-                <input
-                  type="text"
-                  name="user-like-to-go"
-                  class="search-form__field"
-                  placeholder="Where would you like to go?" />
-                <button type="submit" class="search-form__submit">
-                  search
-                </button>
+              <h2 class="watch__title">Watch Videos</h2>
+              <p class="watch__deck">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-            </fieldset>
-          </form> -->
-        </div>
+            </div>
+          </div>
+        </section>
+        <button class="intro__button" type="submit">VIEW PROGRAM</button>
       </section>
     </main>
-    <section>
+    <footer class="footer">
+      <section>
+        <h2 class="intro__subtitle">About</h2>
+        <p class="intro__subtitle-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et <br />dolore magna aliqua.
+          &nbsp; <a>READ MORE...</a>
+        </p>
+      </section>
       <ul class="social-list">
-        <li class="social-list__item"><a href="#">Facebook</a></li>
-        <li class="social-list__item"><a href="#">Twitter</a></li>
-        <li class="social-list__item"><a href="#">Instagram</a></li>
-        <li class="social-list__item"><a href="#">LinkedIn</a></li>
+        <li class="social-list__item">
+          <a href="#">
+            <img src="./public/bytesize_twitter.svg" alt="#twitter" />
+          </a>
+        </li>
+        <br />
+        <li class="social-list__item">
+          <a href="#"><img src="./public/ci_youtube.svg" alt="#facebook" /></a>
+        </li>
+        <br />
+        <li class="social-list__item">
+          <a href="#">
+            <img src="./public/cib_facebook-f.svg" alt="#facebook"
+          /></a>
+        </li>
+        <br />
+        <li class="social-list__item">
+          <a href="#"
+            ><img src="./public/fontisto_instagram.svg" alt="#inst"
+          /></a>
+        </li>
+        <br />
       </ul>
-    </section>
+    </footer>
+
+    <div class="snow">
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+      <div class="snow__flake">﹡</div>
+    </div>
+    <fieldset class="snow-toggle">
+      <legend class="snow-toggle__label">Переключатель осадков</legend>
+      <label class="snow-toggle__item">
+        <input
+          class="snow-toggle__control"
+          type="radio"
+          name="snow"
+          value="snowfall"
+          checked />
+        <span class="snow-toggle__text">Снег</span>
+      </label>
+      <label class="snow-toggle__item">
+        <input
+          class="snow-toggle__control"
+          type="radio"
+          name="snow"
+          value="none" />
+        <span class="snow-toggle__text">Без осадков</span>
+      </label>
+    </fieldset>
+    <script src="./src/script.ts"></script>
   </body>
 </html>

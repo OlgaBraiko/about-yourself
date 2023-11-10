@@ -2,48 +2,34 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-
-  background-size: cover;
-  background-color: rgba(1, 0, 0, 1);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.wrapper-full {
-  max-width: 1260px;
-  margin: 0 auto;
+  background: url("../public/Rectangle\ 1.jpg") lightgray 50% / cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Стили для шапки */
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-}
-
-.header_active {
-  background: #0e1d28;
-}
-
-.header__wrapper {
+.wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 55px;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  margin-top: 150px;
+  margin-left: 330px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: 150px;
 }
 
 .header__logo {
   color: #fff;
-  font-family: Philosopher;
+
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -51,18 +37,10 @@ body {
   text-transform: capitalize;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
 .header__list {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
-
   background: rgba(255, 255, 255, 0.2);
 
   height: 70px;
@@ -85,9 +63,6 @@ img {
 
 .header__nav ul {
   list-style-type: none;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
 }
 
 .header__link:hover,
@@ -100,8 +75,7 @@ img {
   width: 50px;
   height: 30px;
   position: relative;
-  left: 0;
-  display: none;
+  display: block;
 }
 
 .burger__first {
@@ -119,21 +93,43 @@ img {
   display: block;
   width: 100%;
   height: 2px;
-  background: #8c0909;
+  background: #f4f3f3;
   position: absolute;
 }
 
 /* Стили для основного контента */
 
-.container {
-}
 .intro {
-  min-height: 100vh;
-  background: url("../public/Rectangle\ 1.jpg") lightgray 50% / cover no-repeat;
-  padding-top: 265px;
-  padding-bottom: 235px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
+.intro__input {
+  width: 539px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(38, 197, 232, 0.14) 0%,
+    rgba(0, 149, 214, 0.14) 100%
+  );
+}
+.intro__search-icon {
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
+.intro__input::before {
+  content: "";
+
+  position: relative;
+  top: 0;
+  bottom: 20px;
+  z-index: 1;
+  margin-right: 10px;
+}
 .intro__title {
   font-weight: 500;
   font-size: 3rem;
@@ -142,11 +138,54 @@ img {
   max-width: 620px;
   margin-bottom: 22px;
 }
+.intro {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.intro-watch__wrapper {
+  margin-right: 150px;
+}
+
+.intro__watch-videos {
+  max-width: 315px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: end;
+  align-items: center;
+}
+
+.watch__title {
+  width: 192px;
+  height: 21px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: left;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.watch__deck {
+  color: #fff;
+  margin-top: 60px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.watch__icon {
+  padding-right: 20px;
+}
 
 .intro__button {
   width: 375px;
   height: 70px;
-  flex-shrink: 0;
+  margin-top: 50px;
   border-radius: 50px;
   border: 2px solid #fff;
   background: linear-gradient(
@@ -159,53 +198,141 @@ img {
   font-size: 1.2rem;
 }
 .intro__subtitle {
-  font-weight: 400;
+  width: 95px;
+  height: 38px;
+  flex-shrink: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  padding-left: 250px;
+}
+.intro__subtitle-text {
+  margin-top: 20px;
   font-size: 1rem;
   line-height: 2rem;
   max-width: 545px;
   color: #ffff;
   margin-bottom: 60px;
+  max-width: 510px;
+  padding-left: 250px;
 }
-.search-form__info {
+
+/* Footer style */
+.footer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: start;
 }
-.search-form__field {
-  width: 300px;
-  background-color: transparent;
-  background: url("./img/Oval.svg") no-repeat left top;
-  background-size: 20px;
+.social-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-list__item {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* snow style */
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  background-color: #18191c;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.snow-toggle {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
   border: 0;
-  border-bottom: 2px solid #bfc0c5;
-  margin-right: 60px;
-  padding-left: 45px;
-  padding-bottom: 20px;
-  font-weight: 500;
-  font-size: 1rem;
-  color: white;
 }
 
-.search-form__field::placeholder {
-  font-weight: 500;
-  font-size: 18px;
-  color: white;
-}
-.search-form__submit {
-  padding: 15px 40px;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-style: 2rem;
-  color: white;
-  background: #1b7dff;
-  border: 0;
+.snow-toggle__label {
+  padding-bottom: 10px;
 }
 
-fieldset {
-  border: none;
+.snow-toggle__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.search-form__submit:hover,
-.search-form__submit:focus,
-.search-form__submit:active {
-  background: rgb(108, 160, 228);
+.snow-toggle__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 12px);
+  width: 25px;
+  height: 25px;
+  border: 1px solid #83c4e2;
+  border-radius: 50%;
+}
+
+.snow-toggle__control {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  margin-right: 15px;
+}
+
+.snow-toggle__control:focus + .snow-toggle__text::before {
+  border-color: #2e9aff;
+}
+
+.snow-toggle__control:checked + .snow-toggle__text::before {
+  background-color: #ffffff;
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 40%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.snow {
+  --animation-name: snowfall;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.snow__flake {
+  position: relative;
+  top: -1.5em;
+  color: #c1dcec;
+  animation-name: var(--animation-name);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 1.5em));
+  }
 }
